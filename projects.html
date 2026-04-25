@@ -31,11 +31,33 @@
   <section>
     <div class="projects-full-grid">
 
-      <div class="project-full-card reveal" style="--card-color: var(--dusty-teal);">
+      <div class="project-full-card reveal" style="--card-color:var(--blush-deep);" data-modal="malware">
         <div class="pfc-bloom-bar"></div>
         <div class="pfc-header">
           <div>
             <div class="pfc-number">01</div>
+            <div class="pfc-title">Malware Reverse Engineering Lab</div>
+            <div class="pfc-subtitle">Static binary analysis · Ongoing</div>
+          </div>
+          <div class="pfc-date">Jan 2026 – Present</div>
+        </div>
+        <div class="pfc-body">
+          <p class="pfc-desc">Using IDA Pro and OllyDbg to perform deep static analysis on real-world malware samples, annotating x86 assembly line by line to reconstruct program logic, document exploit mechanisms, and understand how malicious software operates at the binary level.</p>
+          <ul class="pfc-bullets">
+            <li>Reverse engineered 6 malware samples spanning worms, boot sector viruses, droppers, and a polymorphic PE infector, producing over 2,000 lines of annotated assembly</li>
+            <li>Analyzed techniques including stack-based buffer overflows, UDP worm propagation, null-free shellcode construction, self-modifying code, and runtime API resolution</li>
+            <li>Unpacked and dissected Harulf, an encrypted multi-payload Windows PE infector employing polymorphic and anti-debugging techniques</li>
+          </ul>
+          <div class="tags"><span class="tag">IDA Pro</span><span class="tag">OllyDbg</span><span class="tag">x86 Assembly</span><span class="tag">Static Binary Analysis</span><span class="tag">Reverse Engineering</span></div>
+        </div>
+        <p class="pfc-more">click for more detail →</p>
+      </div>
+
+      <div class="project-full-card reveal reveal-delay-1" style="--card-color:var(--dusty-teal);" data-modal="basil">
+        <div class="pfc-bloom-bar"></div>
+        <div class="pfc-header">
+          <div>
+            <div class="pfc-number">02</div>
             <div class="pfc-title">basil</div>
             <div class="pfc-subtitle">Smart Pantry Web App · Hackathon</div>
           </div>
@@ -43,41 +65,17 @@
         </div>
         <div class="pfc-body">
           <p class="pfc-desc">Built at Georgia Tech's hackathon, basil solves a real problem: keeping track of what's in your fridge before it expires. I architected the backend — a Flask/SQLite/SQLAlchemy stack serving a React frontend — and tackled the two hardest parts: wrangling the USDA food database and building an AI recipe generator that produces consistent, accurate nutritional data.</p>
-          <p class="pfc-desc">The AI integration required real prompt engineering: I built a custom Mosaic/OpenAI client that forces structured JSON output (including macros), which the backend parses and validates. Authentication uses Amazon Cognito with proper session management — something we learned at an AWS workshop the same weekend and implemented from scratch in under 24 hours.</p>
           <ul class="pfc-bullets">
-            <li>Parsed 8,000+ USDA food database entries from raw CSV into a queryable SQLite/SQLAlchemy schema</li>
-            <li>Engineered structured JSON prompts for consistent, macro-accurate AI recipe output</li>
-            <li>Implemented Amazon Cognito auth with refresh token handling and session expiry edge cases</li>
-            <li>Collaborated on React frontend for inventory management and recipe browsing</li>
+            <li>Parsed 8,000+ USDA food database entries from raw CSV into a queryable SQLite/SQLAlchemy schema and built 10+ REST API endpoints connecting to the React frontend</li>
+            <li>Engineered a custom OpenAI/Mosaic client with structured JSON prompts for inventory-aware recipe generation with accurate nutritional macros</li>
+            <li>Implemented Amazon Cognito authentication with refresh token handling and session expiry edge case management</li>
           </ul>
-          <div class="tags"><span class="tag">React</span><span class="tag">Flask</span><span class="tag">SQLite</span><span class="tag">SQLAlchemy</span><span class="tag">AWS Cognito</span><span class="tag">OpenAI API</span><span class="tag">Python</span></div>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">SQLite</span><span class="tag">React</span><span class="tag">AWS Cognito</span><span class="tag">OpenAI API</span></div>
         </div>
+        <p class="pfc-more">click for more detail →</p>
       </div>
 
-      <div class="project-full-card reveal reveal-delay-1" style="--card-color: var(--blush-deep);">
-        <div class="pfc-bloom-bar"></div>
-        <div class="pfc-header">
-          <div>
-            <div class="pfc-number">02</div>
-            <div class="pfc-title">Malware Reverse Engineering</div>
-            <div class="pfc-subtitle">Binary Analysis · Ongoing</div>
-          </div>
-          <div class="pfc-date">Ongoing</div>
-        </div>
-        <div class="pfc-body">
-          <p class="pfc-desc">Using IDA Pro to perform deep static analysis on real-world malware samples, annotating x86 assembly line-by-line to reconstruct program logic, document exploit mechanisms, and understand how malicious software actually operates at the binary level.</p>
-          <p class="pfc-desc">Each sample teaches something different. SQLSlammer showed me how a 376-byte worm can spread globally using a single UDP packet and a stack-based buffer overflow. Michelangelo revealed classic boot sector infection. DOS7 showed stealth via interrupt hooking and memory-resident code.</p>
-          <ul class="pfc-bullets">
-            <li>Analyzed W32.SQLSlammer: buffer overflow exploit chain, null-free shellcode, PEB traversal for runtime API resolution, and jmp esp stack exploitation</li>
-            <li>Analyzed Michelangelo: boot sector infection, MBR/partition table overwrites, and payload trigger logic</li>
-            <li>Analyzed Virus.DOS.Dos7: interrupt hooking, memory-resident behavior, and stealth techniques</li>
-            <li>Ongoing — adding Lucius and additional samples</li>
-          </ul>
-          <div class="tags"><span class="tag">IDA Pro</span><span class="tag">x86 Assembly</span><span class="tag">Static Analysis</span><span class="tag">Exploit Analysis</span><span class="tag">Shellcode</span></div>
-        </div>
-      </div>
-
-      <div class="project-full-card reveal" style="--card-color: var(--butter-deep);">
+      <div class="project-full-card reveal" style="--card-color:var(--butter-deep);" data-modal="ninelives">
         <div class="pfc-bloom-bar"></div>
         <div class="pfc-header">
           <div>
@@ -88,44 +86,22 @@
           <div class="pfc-date">November 2025</div>
         </div>
         <div class="pfc-body">
-          <p class="pfc-desc">A real-time 2D cave exploration game running on a resource-constrained ARM Mbed microcontroller. The entire game — rendering, input, enemy AI, collision, inventory — runs inside a deterministic game loop in C/C++, with no OS and a small LCD display as the only output.</p>
+          <p class="pfc-desc">A real-time 2D cave exploration game running on a resource-constrained ARM Mbed microcontroller. The entire game runs inside a deterministic game loop in C/C++ with no OS and a small LCD display as the only output.</p>
           <ul class="pfc-bullets">
-            <li>Built a tile-based map system backed by a custom hash table mapping coordinates to map entities</li>
-            <li>Implemented random item spawning, score progression, and smart enemy behavior</li>
-            <li>Designed custom cat-themed sprites within tight pixel constraints</li>
-            <li>Handled input via NAV-switch and pushbuttons with debouncing and responsive feel</li>
+            <li>Built a tile-based map system backed by a custom hash table with O(1) average-case coordinate lookups, supporting 20+ distinct items and entity types with independent behavior logic</li>
+            <li>Implemented random item spawning, score progression, and state-machine-driven enemy AI</li>
+            <li>Designed 10+ custom cat-themed pixel sprites within tight display constraints</li>
           </ul>
           <div class="tags"><span class="tag">C</span><span class="tag">C++</span><span class="tag">ARM Mbed</span><span class="tag">Embedded Systems</span><span class="tag">LCD</span></div>
         </div>
+        <p class="pfc-more">click for more detail →</p>
       </div>
 
-      <div class="project-full-card reveal reveal-delay-1" style="--card-color: var(--sage-mid);">
+      <div class="project-full-card reveal reveal-delay-1" style="--card-color:var(--lavender-mid);" data-modal="shiftscape">
         <div class="pfc-bloom-bar"></div>
         <div class="pfc-header">
           <div>
             <div class="pfc-number">04</div>
-            <div class="pfc-title">Celebi — 500g SumoBot</div>
-            <div class="pfc-subtitle">RoboJackets Robowrestling · 3rd Place</div>
-          </div>
-          <div class="pfc-date">Aug 2024 – Present</div>
-        </div>
-        <div class="pfc-body">
-          <p class="pfc-desc">Designed, programmed, and manufactured a competition-grade 500g sumobot for Georgia Tech's RoboJackets Robowrestling team. Every part — firmware, hardware, PCB, strategy — was built from scratch and refined across hundreds of live matches, ultimately placing 3rd in competition.</p>
-          <ul class="pfc-bullets">
-            <li>Wrote sub-millisecond sensor-driven control loops in C++ for reactive competition behavior</li>
-            <li>Designed and fabricated a custom PCB integrating motors, IR sensors, and the main controller</li>
-            <li>Created dozens of CAD models and manufactured parts from scratch</li>
-            <li>Iteratively tuned hardware and strategy across hundreds of matches to reach 3rd place</li>
-          </ul>
-          <div class="tags"><span class="tag">C++</span><span class="tag">PCB Design</span><span class="tag">CAD/CAM</span><span class="tag">Embedded Firmware</span><span class="tag">Robotics</span></div>
-        </div>
-      </div>
-
-      <div class="project-full-card reveal" style="--card-color: var(--lavender-mid);">
-        <div class="pfc-bloom-bar"></div>
-        <div class="pfc-header">
-          <div>
-            <div class="pfc-number">05</div>
             <div class="pfc-title">ShiftScape</div>
             <div class="pfc-subtitle">VGDev · Team Project</div>
           </div>
@@ -134,42 +110,89 @@
         <div class="pfc-body">
           <p class="pfc-desc">A spatial puzzle game built with Georgia Tech's VGDev club where the board itself transforms as you navigate — tiles shift, rotate, and change state based on player movement, creating a constantly evolving puzzle space.</p>
           <ul class="pfc-bullets">
-            <li>Implemented multiple tile types with distinct behavioral logic — trigger, environmental, and transformation tiles</li>
-            <li>Built the tile behavior system using component-based design patterns in Unity</li>
-            <li>Collaborated with a cross-disciplinary team including designers and artists</li>
+            <li>Implemented 5+ tile types with distinct behavioral logic using Unity's component system, including trigger tiles, environmental tiles that modify movement, and transformation tiles that restructure the board</li>
+            <li>Collaborated with designers and artists across a 4-month club sprint, integrating gameplay mechanics with visual and audio assets</li>
           </ul>
           <div class="tags"><span class="tag">C#</span><span class="tag">Unity</span><span class="tag">Game Design</span></div>
         </div>
+        <p class="pfc-more">click for more detail →</p>
       </div>
 
-      <div class="project-full-card reveal reveal-delay-1" style="--card-color: var(--blush);">
+      <div class="project-full-card reveal" style="--card-color:var(--sage-mid);" data-modal="moodtracker">
+        <div class="pfc-bloom-bar"></div>
+        <div class="pfc-header">
+          <div>
+            <div class="pfc-number">05</div>
+            <div class="pfc-title">Mood Tracker</div>
+            <div class="pfc-subtitle">Personal Wellness Web App · Solo</div>
+          </div>
+          <div class="pfc-date">January to March 2024</div>
+        </div>
+        <div class="pfc-body">
+          <p class="pfc-desc">A solo full-stack mood tracking web app built around the idea that mood logging should feel personal — daily prompts adapt to the user's specific hobbies rather than using generic check-ins. Built with Python/Flask and self-hosted on a live server.</p>
+          <ul class="pfc-bullets">
+            <li>Built a heatmap visualization to surface mood patterns over time, a hobby-integrated daily logging system, and a full journaling feature for open-ended reflection</li>
+            <li>Implemented session-based user authentication and self-hosted on a live server with persistent data storage</li>
+          </ul>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">HTML/CSS</span><span class="tag">SQLite</span></div>
+        </div>
+        <p class="pfc-more">click for more detail →</p>
+      </div>
+
+      <div class="project-full-card reveal reveal-delay-1" style="--card-color:var(--blush);" data-modal="moodphysical">
         <div class="pfc-bloom-bar"></div>
         <div class="pfc-header">
           <div>
             <div class="pfc-number">06</div>
-            <div class="pfc-title">Mood Tracker</div>
-            <div class="pfc-subtitle">Personal Wellness Web App · Solo</div>
+            <div class="pfc-title">Mood Tracker (but physical!)</div>
+            <div class="pfc-subtitle">Arduino Hardware Project</div>
           </div>
-          <div class="pfc-date">2024</div>
+          <div class="pfc-date">April 2026</div>
         </div>
         <div class="pfc-body">
-          <p class="pfc-desc">A solo full-stack mood tracking web app built with Python/Flask and self-hosted on a live server. Designed around the idea that mood tracking should feel personal — the app adapts to the user's specific hobbies and routines rather than using generic prompts.</p>
+          <p class="pfc-desc">A physical mood tracker built with an Arduino Redboard, breadboard, LCD screen, and three buttons. Press happy, okay, or sad and the LCD tallies your mood throughout the day.</p>
           <ul class="pfc-bullets">
-            <li>Built a personalized heatmap visualization to surface mood patterns over time</li>
-            <li>Integrated hobby-based daily logging prompts with a full journaling system</li>
-            <li>Implemented session-based user authentication and self-hosted on a live server</li>
+            <li>Wired 3 pushbuttons to an Arduino Redboard with debounce delay and counter logic</li>
+            <li>Programmed live tally display on an LCD screen using the LiquidCrystal library</li>
+            <li>Sketched emoji faces on the buttons instead of 3D printing them, which honestly looks better</li>
           </ul>
-          <div class="tags"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">HTML/CSS</span><span class="tag">Self-hosted</span></div>
+          <div class="tags"><span class="tag">Arduino</span><span class="tag">C++</span><span class="tag">LCD</span><span class="tag">Circuit Design</span></div>
         </div>
+        <p class="pfc-more">click for more detail →</p>
+      </div>
+
+      <div class="project-full-card reveal" style="--card-color:var(--sage-dark);" data-modal="celebi">
+        <div class="pfc-bloom-bar"></div>
+        <div class="pfc-header">
+          <div>
+            <div class="pfc-number">07</div>
+            <div class="pfc-title">Celebi</div>
+            <div class="pfc-subtitle">RoboJackets Robowrestling · 3rd Place</div>
+          </div>
+          <div class="pfc-date">Aug 2024 – Present</div>
+        </div>
+        <div class="pfc-body">
+          <p class="pfc-desc">A 500g competition sumobot built from scratch for Georgia Tech's RoboJackets Robowrestling team. Placed 3rd at Maker Faire Orlando.</p>
+          <ul class="pfc-bullets">
+            <li>Sub-millisecond sensor-driven control loops with custom PCB integrating motors and IR sensors</li>
+            <li>30+ CAD models, fabricated parts from scratch, refined across 100+ live matches</li>
+          </ul>
+          <div class="tags"><span class="tag">C++</span><span class="tag">PCB Design</span><span class="tag">CAD/SolidWorks</span><span class="tag">Embedded Firmware</span></div>
+        </div>
+        <p class="pfc-more">click for more detail →</p>
       </div>
 
     </div>
   </section>
 </div>
 
+<div id="modal-overlay" class="modal-overlay">
+  <div id="modal-content" class="modal"></div>
+</div>
+
 <footer>
   <div class="footer-inner">
-    <p class="footer-copy">✿ Emma Xuan · Computer Engineering @ Georgia Tech · 2028</p>
+    <p class="footer-copy">✿ Emma Xuan · Computer Engineering at Georgia Tech · 2028</p>
     <div class="footer-links">
       <a href="mailto:exuan7@gatech.edu">email</a>
       <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">linkedin</a>

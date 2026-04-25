@@ -30,11 +30,11 @@
         open to summer 2026 internships
       </div>
       <p class="hero-tagline">Computer Engineer · Georgia Tech</p>
-      <h1>Emma<br><em>Xuan.</em></h1>
+      <h1>Emma<br><em>Xuan</em></h1>
       <p>
-        I build things — from reverse-engineering malware at the binary level to shipping
-        full-stack web apps at hackathons. I'm interested in cybersecurity, backend systems,
-        and the craft of making software that actually works.
+        I build things across the stack, from reverse-engineering malware at the binary level
+        to shipping full-stack web apps at hackathons. I'm interested in cybersecurity,
+        systems engineering, and making software that actually works.
       </p>
       <div class="hero-cta">
         <a href="projects.html" class="btn btn-primary">View Projects →</a>
@@ -49,8 +49,6 @@
         <div class="bg-blob-2"></div>
         <div class="frame-img">
           <img src="images/headshot.jpg" alt="Emma Xuan">
-          <!--<span style="font-size:2.5rem">🌿</span>
-          <span style="font-size:0.75rem; line-height:1.6">add your photo here<br><code style="font-size:0.65rem; opacity:0.7">images/headshot.jpg</code></span>-->
         </div>
         <div class="frame-ring"></div>
         <span class="frame-flower ff-1">🌸</span>
@@ -61,71 +59,58 @@
   </div>
 </div>
 
-
-
-<!-- FEATURED PROJECTS -->
 <div class="container">
   <section>
     <div class="section-header reveal">
-      <p class="label">Featured Work</p>
+      <p class="label">featured work</p>
       <h2>Things I've <em>Built</em></h2>
     </div>
 
     <div class="projects-preview-grid">
-      <div class="project-card reveal" style="--card-bloom: var(--dusty-teal);">
+      <div class="project-card reveal" style="--card-bloom:var(--blush);" data-modal="malware">
         <div class="project-num">01</div>
-        <h3 class="project-title">basil</h3>
-        <p class="project-desc">
-          Smart pantry web app built at a hackathon. Flask/SQLite backend parsing 8,000+ USDA
-          food database entries, with an inventory-aware AI recipe generator.
-        </p>
+        <h3 class="project-title">Malware Reverse Engineering Lab</h3>
+        <p class="project-desc">Six real-world malware samples analyzed in IDA Pro and OllyDbg, line by line. Worms, boot sector viruses, droppers, and a polymorphic PE infector.</p>
         <div class="tags">
-          <span class="tag">React</span>
-          <span class="tag">Flask</span>
-          <span class="tag">SQLite</span>
-          <span class="tag">AWS Cognito</span>
-          <span class="tag">OpenAI API</span>
+          <span class="tag">IDA Pro</span><span class="tag">OllyDbg</span><span class="tag">x86 Assembly</span><span class="tag">Reverse Engineering</span>
         </div>
+        <p class="card-more">click to read more →</p>
       </div>
 
-      <div class="project-card reveal reveal-delay-1" style="--card-bloom: var(--blush);">
+      <div class="project-card reveal reveal-delay-1" style="--card-bloom:var(--dusty-teal);" data-modal="basil">
         <div class="project-num">02</div>
-        <h3 class="project-title">Malware Reverse Engineering</h3>
-        <p class="project-desc">
-          Line-by-line x86 assembly annotation of real-world malware — SQLSlammer,
-          Michelangelo, DOS7 — documenting exploit chains and propagation mechanics in IDA Pro.
-        </p>
+        <h3 class="project-title">basil</h3>
+        <p class="project-desc">Smart pantry web app built at a hackathon. Flask/SQLite backend parsing 8,000+ USDA food database entries, with an inventory-aware AI recipe generator.</p>
         <div class="tags">
-          <span class="tag">IDA Pro</span>
-          <span class="tag">x86 Assembly</span>
-          <span class="tag">Reverse Engineering</span>
+          <span class="tag">React</span><span class="tag">Flask</span><span class="tag">SQLite</span><span class="tag">AWS Cognito</span><span class="tag">OpenAI API</span>
         </div>
+        <p class="card-more">click to read more →</p>
       </div>
 
-      <div class="project-card reveal reveal-delay-2" style="--card-bloom: var(--butter);">
+      <div class="project-card reveal reveal-delay-2" style="--card-bloom:var(--butter);" data-modal="ninelives">
         <div class="project-num">03</div>
         <h3 class="project-title">Nine Lives</h3>
-        <p class="project-desc">
-          Real-time 2D cave exploration game on ARM Mbed. Custom hash table for tile mapping,
-          deterministic game loop, smart enemy behavior, and hand-crafted cat sprites.
-        </p>
+        <p class="project-desc">Real-time 2D cave exploration game on ARM Mbed. Custom hash table for tile mapping, deterministic game loop, smart enemy behavior, and hand-crafted cat sprites.</p>
         <div class="tags">
-          <span class="tag">C/C++</span>
-          <span class="tag">ARM Mbed</span>
-          <span class="tag">Embedded</span>
+          <span class="tag">C/C++</span><span class="tag">ARM Mbed</span><span class="tag">Embedded</span>
         </div>
+        <p class="card-more">click to read more →</p>
       </div>
     </div>
 
-    <div style="margin-top:2rem; text-align:center;" class="reveal">
-      <a href="projects.html" class="btn btn-outline">See All Six Projects →</a>
+    <div style="margin-top:2rem;text-align:center;" class="reveal">
+      <a href="projects.html" class="btn btn-outline">See All Projects →</a>
     </div>
   </section>
 </div>
 
+<div id="modal-overlay" class="modal-overlay">
+  <div id="modal-content" class="modal"></div>
+</div>
+
 <footer>
   <div class="footer-inner">
-    <p class="footer-copy">✿ Emma Xuan · Computer Engineering @ Georgia Tech · 2028</p>
+    <p class="footer-copy">✿ Emma Xuan · Computer Engineering at Georgia Tech · 2028</p>
     <div class="footer-links">
       <a href="mailto:exuan7@gatech.edu">email</a>
       <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">linkedin</a>
