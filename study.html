@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" class="study-html">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study with me · Emma Xuan</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="study-page">
+
+<div class="study-backdrop" aria-hidden="true">
+  <img class="study-backdrop-img" src="images/study-room.webp" alt="" width="960" height="540" decoding="async" fetchpriority="high">
+  <div class="study-backdrop-shade"></div>
+</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">✿ Emma Xuan</a>
+    <ul class="nav-links">
+      <li><a href="index.html">home</a></li>
+      <li><a href="about.html">about</a></li>
+      <li><a href="projects.html">projects</a></li>
+      <li><a href="resume.html">resume</a></li>
+      <li><a href="study.html">study with me</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container study-wrap">
+  <div class="page-hero">
+    <p class="label">deep work</p>
+    <h1 class="page-title">Study <em>with me</em></h1>
+    <p class="study-lede reveal">Pomodoro timer, layered ambience, tasks, and notes. Tasks and notes are saved in <strong>this browser only</strong> (localStorage).</p>
+  </div>
+
+  <div class="study-layout">
+    <section class="study-card reveal" aria-labelledby="timer-heading">
+      <h2 id="timer-heading" class="study-card-title">Timer</h2>
+      <p class="study-phase" id="study-phase" aria-live="polite">Ready</p>
+      <div class="study-timer" id="study-timer" role="timer" aria-live="polite">25:00</div>
+      <div class="study-timer-actions">
+        <button type="button" class="btn btn-primary" id="study-start-pause">Start</button>
+        <button type="button" class="btn btn-outline" id="study-reset">Reset</button>
+        <button type="button" class="btn btn-outline" id="study-skip">Skip phase</button>
+      </div>
+      <p class="study-note study-timer-hint">25 min work · 5 min break. Each ambience layer has its own play button (your browser may require a click before audio plays).</p>
+
+      <div class="study-split">
+        <h3 class="study-subhead">Tasks</h3>
+        <ul id="study-todo-list" class="study-todo-list"></ul>
+        <div class="study-todo-add">
+          <input type="text" id="study-todo-input" class="study-todo-input" placeholder="Add a task…" maxlength="200" autocomplete="off">
+          <button type="button" class="btn btn-outline study-btn-tiny" id="study-todo-add-btn">Add</button>
+        </div>
+      </div>
+
+      <div class="study-split">
+        <div class="study-notes-head">
+          <h3 class="study-subhead">Notes</h3>
+          <button type="button" class="btn btn-outline study-btn-tiny" id="study-notes-clear">Clear notes</button>
+        </div>
+        <textarea id="study-notes" class="study-notes-area" rows="6" placeholder="Scratch pad…"></textarea>
+      </div>
+    </section>
+
+    <section class="study-card reveal reveal-delay-1" aria-labelledby="ambience-heading">
+      <h2 id="ambience-heading" class="study-card-title">Ambience</h2>
+      <p class="study-note study-amb-intro">Mix layers — each has its own play/pause and volume.</p>
+
+      <div class="study-amb-stack">
+        <div class="study-amb-layer">
+          <div class="study-amb-rowhead">
+            <span class="study-amb-name">Rain</span>
+            <button type="button" class="study-amb-playbtn" data-amb-play="rain" aria-pressed="false" aria-label="Play Rain">▶</button>
+          </div>
+          <input type="range" class="study-amb-slider" data-amb-vol="rain" min="0" max="100" value="40" aria-label="Rain volume">
+        </div>
+        <div class="study-amb-layer">
+          <div class="study-amb-rowhead">
+            <span class="study-amb-name">Fireplace</span>
+            <button type="button" class="study-amb-playbtn" data-amb-play="fireplace" aria-pressed="false" aria-label="Play Fireplace">▶</button>
+          </div>
+          <input type="range" class="study-amb-slider" data-amb-vol="fireplace" min="0" max="100" value="35" aria-label="Fireplace volume">
+        </div>
+        <div class="study-amb-layer">
+          <div class="study-amb-rowhead">
+            <span class="study-amb-name">Coffee shop</span>
+            <button type="button" class="study-amb-playbtn" data-amb-play="coffee" aria-pressed="false" aria-label="Play Coffee shop">▶</button>
+          </div>
+          <input type="range" class="study-amb-slider" data-amb-vol="coffee" min="0" max="100" value="30" aria-label="Coffee shop volume">
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="study-card study-spotify-block reveal reveal-delay-2" aria-labelledby="spotify-heading">
+    <h2 id="spotify-heading" class="study-card-title">Music</h2>
+    <p class="study-note">Change the playlist: Spotify → <strong>Share</strong> → <strong>Embed</strong> → paste the iframe <code class="study-code">src</code> below.</p>
+    <div class="study-spotify-frame">
+      <iframe
+        title="Spotify"
+        class="study-spotify-embed"
+        src="https://open.spotify.com/embed/playlist/37i9dQZF1DWZeKCadgRdKQ?utm_source=generator&amp;theme=0"
+        width="100%"
+        height="152"
+        allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"
+        style="border-radius: 12px; border: 0; background: transparent;"></iframe>
+    </div>
+  </section>
+</div>
+
+<footer class="study-footer">
+  <div class="footer-inner">
+    <p class="footer-copy">✿ Emma Xuan · Computer Engineering at Georgia Tech · 2028</p>
+    <div class="footer-links">
+      <a href="mailto:exuan7@gatech.edu">email</a>
+      <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">linkedin</a>
+      <a href="https://github.com/YOUR_GITHUB" target="_blank">github</a>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+<script src="js/study.js"></script>
+</body>
+</html>
