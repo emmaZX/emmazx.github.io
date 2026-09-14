@@ -188,4 +188,26 @@ const modalData = {
       'Iteratively refined hardware and strategy across 100+ live matches to place 3rd at Maker Faire Orlando',
     ],
   },
+  gtmovies: {
+    num: '08', color: 'var(--blush)',
+    title: 'GT Movies Store',
+    subtitle: 'Django E-commerce Demo · Solo',
+    tags: ['Django','Python','Bootstrap','HTML/CSS','PostgreSQL'],
+    overview: 'The GT Movies Store is a Django web app for browsing, searching, and reviewing movies. Users can register, log in, search the catalog, view movie details, leave, edit, and delete reviews, report inappropriate reviews, add movies to a cart, and check out to create an order. Admins get a customized Django admin panel to manage movies, reviews, and orders directly. The whole layout is built on Bootstrap so it adjusts across screen sizes.',
+    video: 'https://www.youtube.com/embed/klbsAKae-K8',
+    bullets: [
+      'Implemented user registration, login, and sessioned review CRUD with input validation and basic sanitization',
+      'Built catalog search and filtering, movie detail pages, and a reporting mechanism for inappropriate reviews',
+      'Developed a simple shopping cart and checkout flow that creates orders tied to user accounts',
+      'Customized the Django admin interface for efficient management of movies, reviews, and orders',
+    ],
+    extra: [
+      'I built the project by working through the course textbook chapter by chapter rather than jumping around.',
+      'For each feature I followed a general pattern: update the model, write the view logic, connect the URL, and build the template.',
+      'I tested each feature as it was built instead of waiting until the end.',
+      'I ran into repeated small syntax bugs — broken HTML attributes and wrapped URLs, and mismatched class names — and became better at spotting them over time.',
+      'I hit at least one logic bug where a filtered variable was accidentally overwritten later in the same function.',
+      'I deployed to PythonAnywhere and worked through path and configuration mismatches between the local and hosted environments.',
+    ],
+  },
 };
