@@ -202,12 +202,7 @@ const modalData = {
       'Customized the Django admin interface for efficient management of movies, reviews, and orders',
     ],
     extra: [
-      'I built the project by working through the course textbook chapter by chapter rather than jumping around.',
-      'For each feature I followed a general pattern: update the model, write the view logic, connect the URL, and build the template.',
-      'I tested each feature as it was built instead of waiting until the end.',
-      'I ran into repeated small syntax bugs — broken HTML attributes and wrapped URLs, and mismatched class names — and became better at spotting them over time.',
-      'I hit at least one logic bug where a filtered variable was accidentally overwritten later in the same function.',
-      'I deployed to PythonAnywhere and worked through path and configuration mismatches between the local and hosted environments.',
+      '<li><p class="modal-text">I built the project by working through the course textbook chapter by chapter rather than jumping around. For each feature I followed a general pattern: update the model, write the view logic, connect the URL, and build the template. I tested each feature as it was built instead of waiting until the end. During development I ran into repeated small syntax bugs (broken HTML attributes and wrapped URLs, and mismatched class names) and became better at spotting them; I also debugged at least one logic bug where a filtered variable was accidentally overwritten later in the same function. Finally, I deployed to PythonAnywhere and worked through path and configuration mismatches between the local and hosted environments.</p></li>'
     ],
   },
 };
