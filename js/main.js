@@ -191,7 +191,7 @@ const modalData = {
   gtmovies: {
     num: '08', color: 'var(--blush)',
     title: 'GT Movies Store',
-    subtitle: 'Django E-commerce Demo · Solo',
+    subtitle: 'Django E-commerce Demo · September 2026',
     tags: ['Django','Python','Bootstrap','HTML/CSS','PostgreSQL'],
     overview: 'The GT Movies Store is a Django web app for browsing, searching, and reviewing movies. Users can register, log in, search the catalog, view movie details, leave, edit, and delete reviews, report inappropriate reviews, add movies to a cart, and check out to create an order. Admins get a customized Django admin panel to manage movies, reviews, and orders directly. The whole layout is built on Bootstrap so it adjusts across screen sizes.',
     video: 'https://www.youtube.com/embed/klbsAKae-K8',
